@@ -9,14 +9,6 @@ const ExpertContactButtons = () => (
       <Phone className="w-5 h-5" />
       Call 1877-332-5780
     </a>
-    <a href="tel:18773325780">
-    <button
-      className="group bg-white text-blue-600 px-8 py-4 rounded-2xl hover:bg-gray-100 transition-all duration-300 hover:scale-105 font-semibold inline-flex items-center gap-2 shadow-lg"
-    >
-      <MessageCircle className="w-5 h-5" />
-      Chat with Expert
-    </button>
-    </a>
   </div>
 );
 

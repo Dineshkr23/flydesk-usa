@@ -123,7 +123,7 @@ const ContactSupport = () => {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid md:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 gap-6 mb-16">
           <Card className="text-center hover:shadow-lg transition-shadow">
             <CardContent className="pt-6">
               <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -135,22 +135,6 @@ const ContactSupport = () => {
                 <a href="tel:18773325780">1877-332-5780</a>
               </div>
               <p className="text-sm text-gray-500 mt-2">24/7 Available</p>
-            </CardContent>
-          </Card>
-
-          <Card className="text-center hover:shadow-lg transition-shadow">
-            <CardContent className="pt-6">
-              <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                <MessageCircle className="w-6 h-6 text-green-600" />
-              </div>
-              <h3 className="font-semibold text-lg mb-2">Live Chat</h3>
-              <p className="text-gray-600 mb-4">Get instant help from our support team</p>
-              <a href="tel:18773325780">
-                <Button className="bg-green-600 hover:bg-green-700">
-                  Start Chat
-                </Button>
-              </a>
-              <p className="text-sm text-gray-500 mt-2">Available 24/7</p>
             </CardContent>
           </Card>
 
