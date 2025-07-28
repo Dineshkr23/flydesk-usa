@@ -1,11 +1,20 @@
-
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Calendar } from "@/components/ui/calendar";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import { CalendarIcon, Phone, Search, Users } from "lucide-react";
 import { format } from "date-fns";
 import { cn } from "@/lib/utils";
@@ -45,20 +54,20 @@ const HeroSection = () => {
       {/* Modern Background with Overlay */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-slate-800/70 to-blue-900/60"></div>
-        <img 
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+        <img
+          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80"
           alt="Airplane flying over clouds"
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       {/* Floating Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-10 w-20 h-20 bg-white/10 rounded-full blur-xl"></div>
         <div className="absolute top-40 right-20 w-32 h-32 bg-blue-500/20 rounded-full blur-xl"></div>
         <div className="absolute bottom-20 left-1/4 w-16 h-16 bg-purple-500/20 rounded-full blur-xl"></div>
       </div>
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-6xl mx-auto">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -69,48 +78,71 @@ const HeroSection = () => {
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
                   Trusted by 2M+ Travelers Worldwide
                 </div>
-                
+
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight">
                   <span className="bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                     Discover
                   </span>
                   <br />
-                  <span className="text-white">
-                    Your Perfect Flight
-                  </span>
+                  <span className="text-white">Your Perfect Flight</span>
                 </h1>
-                
+
                 <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-lg">
-                  Experience seamless booking with our AI-powered search and 24/7 expert support. 
-                  Your journey to extraordinary destinations starts here.
+                  Experience seamless booking with our AI-powered search and
+                  24/7 expert support. Your journey to extraordinary
+                  destinations starts here.
                 </p>
               </div>
-              
+
               {/* Call to Action Buttons */}
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
-                  <a href="tel:18773325780">
+                <Button
+                  size="lg"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 text-lg font-semibold rounded-xl shadow-2xl hover:shadow-blue-500/25 transition-all duration-300"
+                  asChild
+                >
+                  <a href="tel:+18773325780">
                     <Phone className="w-5 h-5 mr-2" />
-                    <span className="hidden sm:inline">Call Experts Get 20% Off: </span>1877-332-5780
+                    <span className="hidden sm:inline">
+                      Call Experts Get 20% Off:{" "}
+                    </span>
+                    (877)-332-5780
                   </a>
                 </Button>
-                
               </div>
-              
+
               {/* Trust Indicators */}
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-8 pt-4">
                 <div className="flex items-center gap-2">
                   <div className="flex -space-x-2">
-                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
-                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
-                    <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face" alt="User" className="w-8 h-8 rounded-full border-2 border-white" />
+                    <img
+                      src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=32&h=32&fit=crop&crop=face"
+                      alt="User"
+                      className="w-8 h-8 rounded-full border-2 border-white"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=32&h=32&fit=crop&crop=face"
+                      alt="User"
+                      className="w-8 h-8 rounded-full border-2 border-white"
+                    />
+                    <img
+                      src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=32&h=32&fit=crop&crop=face"
+                      alt="User"
+                      className="w-8 h-8 rounded-full border-2 border-white"
+                    />
                   </div>
-                  <span className="text-sm text-gray-300">Join 50K+ happy travelers</span>
+                  <span className="text-sm text-gray-300">
+                    Join 50K+ happy travelers
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <div className="flex">
                     {[...Array(5)].map((_, i) => (
-                      <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                      <svg
+                        key={i}
+                        className="w-4 h-4 text-yellow-400 fill-current"
+                        viewBox="0 0 20 20"
+                      >
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                       </svg>
                     ))}
@@ -119,20 +151,34 @@ const HeroSection = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Right Content - Search Form */}
             <div className="relative">
               {/* Decorative flight icon */}
               <div className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center shadow-lg">
-                <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                <svg
+                  className="w-8 h-8 text-white"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
+                  />
                 </svg>
               </div>
-              
+
               <div className="bg-white/10 backdrop-blur-md rounded-3xl p-6 border border-white/20 shadow-2xl">
                 <div className="text-center mb-6">
-                  <h2 className="text-xl font-bold text-white mb-2">Find Your Perfect Flight</h2>
-                  <p className="text-gray-200 text-sm">Search across 500+ airlines worldwide</p>
+                  <h2 className="text-xl font-bold text-white mb-2">
+                    Find Your Perfect Flight
+                  </h2>
+                  <p className="text-gray-200 text-sm">
+                    Search across 500+ airlines worldwide
+                  </p>
                 </div>
 
                 <div className="space-y-4">
@@ -167,7 +213,9 @@ const HeroSection = () => {
                             )}
                           >
                             <CalendarIcon className="mr-2 h-4 w-4" />
-                            {departureDate ? format(departureDate, "MMM dd") : "Select"}
+                            {departureDate
+                              ? format(departureDate, "MMM dd")
+                              : "Select"}
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0 bg-white border border-gray-200 shadow-lg">
@@ -195,7 +243,9 @@ const HeroSection = () => {
                             )}
                           >
                             <CalendarIcon className="mr-2 h-4 w-4" />
-                            {returnDate ? format(returnDate, "MMM dd") : "Select"}
+                            {returnDate
+                              ? format(returnDate, "MMM dd")
+                              : "Select"}
                           </Button>
                         </PopoverTrigger>
                         <PopoverContent className="w-auto p-0 bg-white border border-gray-200 shadow-lg">
@@ -203,7 +253,9 @@ const HeroSection = () => {
                             mode="single"
                             selected={returnDate}
                             onSelect={setReturnDate}
-                            disabled={(date) => date < (departureDate || new Date())}
+                            disabled={(date) =>
+                              date < (departureDate || new Date())
+                            }
                             initialFocus
                             className="pointer-events-auto"
                           />
@@ -229,9 +281,9 @@ const HeroSection = () => {
                   </div>
                 </div>
 
-                <Button 
-                  onClick={handleSearch} 
-                  size="lg" 
+                <Button
+                  onClick={handleSearch}
+                  size="lg"
                   className="w-full mt-6 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold py-3 text-base rounded-xl shadow-2xl hover:shadow-orange-500/25 transition-all duration-300"
                 >
                   <Search className="w-4 h-4 mr-2" />

@@ -14,7 +14,7 @@ const FloatingExpertContact = () => {
             <p className="text-xs opacity-90">Limited time offer</p>
           </div>
           <a
-            href="tel:18773325780"
+            href="tel:+18773325780"
             className="bg-white text-blue-600 px-6 py-2 rounded-full font-semibold text-sm hover:bg-gray-100 transition-all duration-300 flex items-center gap-2"
           >
             <Phone className="w-4 h-4" />
@@ -28,11 +28,11 @@ const FloatingExpertContact = () => {
         {open && (
           <div className="mb-2 animate-fade-in-up">
             <a
-              href="tel:18773325780"
+              href="tel:+18773325780"
               className="group bg-blue-600 text-white px-8 py-4 rounded-2xl hover:bg-blue-700 transition-all duration-300 hover:scale-105 font-semibold inline-flex items-center gap-2 shadow-lg"
             >
               <Phone className="w-5 h-5" />
-              Call 1877-332-5780
+              Call (877)-332-5780
             </a>
           </div>
         )}
@@ -48,4 +48,4 @@ const FloatingExpertContact = () => {
   );
 };
 
-export default FloatingExpertContact; 
+export default FloatingExpertContact;

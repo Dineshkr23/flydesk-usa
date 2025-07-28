@@ -22,6 +22,8 @@ import {
   Star,
   TrendingUp,
   Zap as Lightning,
+  Loader2,
+  Globe,
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import SearchableAirportSelect from "@/components/SearchableAirportSelect";
@@ -41,8 +43,12 @@ import {
 import { cn } from "@/lib/utils";
 
 const FlightResults = () => {
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     window.scrollTo(0, 0);
+    const timer = setTimeout(() => setIsLoading(false), 10000);
+    return () => clearTimeout(timer);
   }, []);
   const [searchParams] = useSearchParams();
   const [from, setFrom] = useState(searchParams.get("from") || "");
@@ -135,9 +141,9 @@ const FlightResults = () => {
             className="flex-1 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-3 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
             asChild
           >
-            <a href="tel:18773325780">
+            <a href="tel:+18773325780">
               <Phone className="w-5 h-5 mr-2" />
-              Call Now: 1877-332-5780
+              Call Now: (877)-332-5780
             </a>
           </Button>
           <Button
@@ -211,7 +217,190 @@ const FlightResults = () => {
 
         {/* Flight Results */}
         <div className="space-y-6 mb-8">
-          <NoFlightsMessage />
+          {isLoading ? (
+            <div className="fixed inset-0 bg-gradient-to-br from-blue-50 via-white to-purple-50 z-50 flex items-center justify-center">
+              {/* World Map Background */}
+              <div className="absolute inset-0 opacity-20">
+                <svg viewBox="0 0 1000 500" className="w-full h-full">
+                  <defs>
+                    <linearGradient
+                      id="map-gradient"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="100%"
+                    >
+                      <stop offset="0%" stopColor="#3b82f6" />
+                      <stop offset="50%" stopColor="#1d4ed8" />
+                      <stop offset="100%" stopColor="#a21caf" />
+                    </linearGradient>
+                  </defs>
+                  {/* Simplified world map paths */}
+                  <path
+                    d="M150,200 Q200,180 250,200 T350,200 Q400,220 450,200 T550,200 Q600,180 650,200 T750,200"
+                    fill="none"
+                    stroke="url(#map-gradient)"
+                    strokeWidth="2"
+                    opacity="0.3"
+                  />
+                  <path
+                    d="M200,150 Q250,130 300,150 T400,150 Q450,170 500,150 T600,150 Q650,130 700,150 T800,150"
+                    fill="none"
+                    stroke="url(#map-gradient)"
+                    strokeWidth="2"
+                    opacity="0.3"
+                  />
+                  <path
+                    d="M100,250 Q150,230 200,250 T300,250 Q350,270 400,250 T500,250 Q550,230 600,250 T700,250"
+                    fill="none"
+                    stroke="url(#map-gradient)"
+                    strokeWidth="2"
+                    opacity="0.3"
+                  />
+                  <path
+                    d="M50,300 Q100,280 150,300 T250,300 Q300,320 350,300 T450,300 Q500,280 550,300 T650,300"
+                    fill="none"
+                    stroke="url(#map-gradient)"
+                    strokeWidth="2"
+                    opacity="0.3"
+                  />
+                </svg>
+              </div>
+
+              {/* Multiple Traveling Planes */}
+              {[0, 1, 2, 3, 4, 5].map((i) => (
+                <div
+                  key={i}
+                  className="absolute"
+                  style={{
+                    animation: `plane-travel-${i} 4s linear infinite`,
+                    animationDelay: `${i * 0.8}s`,
+                  }}
+                >
+                  <Plane
+                    className="w-6 h-6 text-blue-500 drop-shadow-lg"
+                    style={{
+                      filter: "drop-shadow(0 2px 8px rgba(59, 130, 246, 0.4))",
+                    }}
+                  />
+                </div>
+              ))}
+
+              {/* Big Final Plane */}
+              <div
+                className="absolute"
+                style={{
+                  animation: "big-plane-finale 6s ease-in-out forwards",
+                  animationDelay: "3s",
+                }}
+              >
+                <Plane
+                  className="w-16 h-16 text-blue-600 drop-shadow-2xl"
+                  style={{
+                    filter: "drop-shadow(0 4px 16px rgba(59, 130, 246, 0.6))",
+                  }}
+                />
+              </div>
+
+              {/* Loading Text */}
+              <div className="relative z-10 text-center">
+                <h3 className="text-3xl font-bold text-gray-900 mb-4 tracking-tight animate-pulse">
+                  Searching flights...
+                </h3>
+                <p
+                  className="text-gray-600 text-lg animate-pulse"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  Exploring routes around the world
+                </p>
+              </div>
+
+              <style>{`
+                  @keyframes plane-travel-0 {
+                    0% { left: 10%; top: 30%; transform: rotate(15deg) scale(0.8); opacity: 0; }
+                    10% { opacity: 1; }
+                    90% { opacity: 1; }
+                    100% { left: 90%; top: 25%; transform: rotate(-10deg) scale(0.8); opacity: 0; }
+                  }
+                  
+                  @keyframes plane-travel-1 {
+                    0% { left: 15%; top: 45%; transform: rotate(25deg) scale(0.7); opacity: 0; }
+                    15% { opacity: 1; }
+                    85% { opacity: 1; }
+                    100% { left: 85%; top: 40%; transform: rotate(-15deg) scale(0.7); opacity: 0; }
+                  }
+                  
+                  @keyframes plane-travel-2 {
+                    0% { left: 20%; top: 60%; transform: rotate(-20deg) scale(0.9); opacity: 0; }
+                    20% { opacity: 1; }
+                    80% { opacity: 1; }
+                    100% { left: 80%; top: 55%; transform: rotate(20deg) scale(0.9); opacity: 0; }
+                  }
+                  
+                  @keyframes plane-travel-3 {
+                    0% { left: 25%; top: 35%; transform: rotate(10deg) scale(0.6); opacity: 0; }
+                    25% { opacity: 1; }
+                    75% { opacity: 1; }
+                    100% { left: 75%; top: 30%; transform: rotate(-25deg) scale(0.6); opacity: 0; }
+                  }
+                  
+                  @keyframes plane-travel-4 {
+                    0% { left: 30%; top: 50%; transform: rotate(-30deg) scale(0.8); opacity: 0; }
+                    30% { opacity: 1; }
+                    70% { opacity: 1; }
+                    100% { left: 70%; top: 45%; transform: rotate(30deg) scale(0.8); opacity: 0; }
+                  }
+                  
+                  @keyframes plane-travel-5 {
+                    0% { left: 35%; top: 25%; transform: rotate(5deg) scale(0.7); opacity: 0; }
+                    35% { opacity: 1; }
+                    65% { opacity: 1; }
+                    100% { left: 65%; top: 20%; transform: rotate(-5deg) scale(0.7); opacity: 0; }
+                  }
+                  
+                  @keyframes big-plane-finale {
+                    0% { 
+                      left: -20%; 
+                      top: 50%; 
+                      transform: rotate(45deg) scale(0.5); 
+                      opacity: 0; 
+                    }
+                    20% { 
+                      left: 10%; 
+                      top: 45%; 
+                      transform: rotate(30deg) scale(0.8); 
+                      opacity: 1; 
+                    }
+                    40% { 
+                      left: 30%; 
+                      top: 40%; 
+                      transform: rotate(15deg) scale(1.2); 
+                      opacity: 1; 
+                    }
+                    60% { 
+                      left: 50%; 
+                      top: 35%; 
+                      transform: rotate(0deg) scale(1.5); 
+                      opacity: 1; 
+                    }
+                    80% { 
+                      left: 70%; 
+                      top: 30%; 
+                      transform: rotate(-15deg) scale(1.8); 
+                      opacity: 1; 
+                    }
+                    100% { 
+                      left: 120%; 
+                      top: 25%; 
+                      transform: rotate(-30deg) scale(2.2); 
+                      opacity: 0; 
+                    }
+                  }
+                `}</style>
+            </div>
+          ) : (
+            <NoFlightsMessage />
+          )}
         </div>
 
         {/* Filters and Results */}

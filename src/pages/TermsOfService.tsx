@@ -1,4 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
 import { FileText, Calendar, Shield, AlertTriangle } from "lucide-react";
 import Header from "@/components/Header";
@@ -8,7 +14,7 @@ const TermsOfService = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       <Header />
-      
+
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         {/* Hero Section */}
         <div className="text-center mb-12">
@@ -29,21 +35,26 @@ const TermsOfService = () => {
           </CardHeader>
           <CardContent>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Welcome to Fly Desk Usa. These Terms of Service ("Terms") govern your use of our website 
-              and services. By accessing or using our services, you agree to be bound by these Terms.
+              Welcome to Fly Desk Usa. These Terms of Service ("Terms") govern
+              your use of our website and services. By accessing or using our
+              services, you agree to be bound by these Terms.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              Fly Desk Usa is an independent travel agency that provides flight booking services. 
-              We are not affiliated with any airline and act as an intermediary between you and 
-              the airlines, hotels, and other travel service providers.
+              Fly Desk Usa is an independent travel agency that provides flight
+              booking services. We are not affiliated with any airline and act
+              as an intermediary between you and the airlines, hotels, and other
+              travel service providers.
             </p>
-            
+
             <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
-              <p className="text-yellow-800 font-semibold mb-2">Important Disclaimer:</p>
+              <p className="text-yellow-800 font-semibold mb-2">
+                Important Disclaimer:
+              </p>
               <p className="text-yellow-700 text-sm">
-                We are a third-party flight booking support service. We are not affiliated with 
-                American Airlines, United Airlines, JetBlue, Delta Air Lines, Southwest Airlines, 
-                or any other airline. All trademarks are the property of their respective owners.
+                We are a third-party flight booking support service. We are not
+                affiliated with American Airlines, United Airlines, JetBlue,
+                Delta Air Lines, Southwest Airlines, or any other airline. All
+                trademarks are the property of their respective owners.
               </p>
             </div>
           </CardContent>
@@ -57,14 +68,16 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                By using our website and services, you acknowledge that you have read, understood, 
-                and agree to be bound by these Terms of Service. If you do not agree to these terms, 
-                please do not use our services.
+                By using our website and services, you acknowledge that you have
+                read, understood, and agree to be bound by these Terms of
+                Service. If you do not agree to these terms, please do not use
+                our services.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                We reserve the right to modify these terms at any time. Changes will be effective 
-                immediately upon posting on our website. Your continued use of our services after 
-                any changes constitutes acceptance of the new terms.
+                We reserve the right to modify these terms at any time. Changes
+                will be effective immediately upon posting on our website. Your
+                continued use of our services after any changes constitutes
+                acceptance of the new terms.
               </p>
             </CardContent>
           </Card>
@@ -76,8 +89,8 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                To access certain features of our services, you may be required to create an account. 
-                You are responsible for:
+                To access certain features of our services, you may be required
+                to create an account. You are responsible for:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                 <li>Providing accurate and complete information</li>
@@ -86,8 +99,8 @@ const TermsOfService = () => {
                 <li>Notifying us immediately of any unauthorized use</li>
               </ul>
               <p className="text-gray-700 leading-relaxed">
-                We reserve the right to terminate accounts that violate these terms or engage in 
-                fraudulent activities.
+                We reserve the right to terminate accounts that violate these
+                terms or engage in fraudulent activities.
               </p>
             </CardContent>
           </Card>
@@ -102,36 +115,37 @@ const TermsOfService = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Booking Process</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    All bookings are subject to availability and confirmation. Prices are subject 
-                    to change until payment is completed. We reserve the right to cancel bookings 
-                    if payment is not received within the specified timeframe.
+                    All bookings are subject to availability and confirmation.
+                    Prices are subject to change until payment is completed. We
+                    reserve the right to cancel bookings if payment is not
+                    received within the specified timeframe.
                   </p>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Payment</h4>
                   <p className="text-gray-700 leading-relaxed mb-2">
-                    We accept various payment methods including credit cards, debit cards, and 
-                    digital wallets. All payments are processed securely through our payment 
-                    partners.
+                    We accept various payment methods including credit cards,
+                    debit cards, and digital wallets. All payments are processed
+                    securely through our payment partners.
                   </p>
                   <p className="text-gray-700 leading-relaxed">
-                    By making a payment, you authorize us to charge the specified amount to your 
-                    chosen payment method.
+                    By making a payment, you authorize us to charge the
+                    specified amount to your chosen payment method.
                   </p>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Pricing and Fees</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    All prices are displayed in the local currency unless otherwise specified. 
-                    Additional fees may apply for services such as seat selection, baggage, 
-                    and travel insurance. These fees will be clearly displayed during the 
-                    booking process.
+                    All prices are displayed in the local currency unless
+                    otherwise specified. Additional fees may apply for services
+                    such as seat selection, baggage, and travel insurance. These
+                    fees will be clearly displayed during the booking process.
                   </p>
                 </div>
               </div>
@@ -148,30 +162,33 @@ const TermsOfService = () => {
                 <div>
                   <h4 className="font-semibold mb-2">Cancellation Terms</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    Cancellation policies vary by airline and ticket type. Some tickets may be 
-                    non-refundable or subject to cancellation fees. Please review the specific 
-                    terms for your booking before confirming.
+                    Cancellation policies vary by airline and ticket type. Some
+                    tickets may be non-refundable or subject to cancellation
+                    fees. Please review the specific terms for your booking
+                    before confirming.
                   </p>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Refund Processing</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    Refunds are processed according to the airline's policy and may take 7-14 
-                    business days to appear on your original payment method. Processing times 
-                    may vary depending on your bank or credit card provider.
+                    Refunds are processed according to the airline's policy and
+                    may take 7-14 business days to appear on your original
+                    payment method. Processing times may vary depending on your
+                    bank or credit card provider.
                   </p>
                 </div>
-                
+
                 <Separator />
-                
+
                 <div>
                   <h4 className="font-semibold mb-2">Service Fees</h4>
                   <p className="text-gray-700 leading-relaxed">
-                    Our service fees are non-refundable unless the cancellation is due to our 
-                    error or a significant service failure on our part.
+                    Our service fees are non-refundable unless the cancellation
+                    is due to our error or a significant service failure on our
+                    part.
                   </p>
                 </div>
               </div>
@@ -185,13 +202,13 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                It is your responsibility to ensure you have all required travel documents, 
-                including valid passports, visas, and any other documentation required by your 
-                destination country.
+                It is your responsibility to ensure you have all required travel
+                documents, including valid passports, visas, and any other
+                documentation required by your destination country.
               </p>
               <p className="text-gray-700 leading-relaxed mb-4">
-                We provide general information about travel requirements, but we are not 
-                responsible for:
+                We provide general information about travel requirements, but we
+                are not responsible for:
               </p>
               <ul className="list-disc list-inside text-gray-700 space-y-2 mb-4">
                 <li>Denial of entry due to insufficient documentation</li>
@@ -200,8 +217,8 @@ const TermsOfService = () => {
                 <li>Customs and immigration decisions</li>
               </ul>
               <p className="text-gray-700 leading-relaxed">
-                We recommend checking with the relevant embassy or consulate for the most 
-                up-to-date travel requirements.
+                We recommend checking with the relevant embassy or consulate for
+                the most up-to-date travel requirements.
               </p>
             </CardContent>
           </Card>
@@ -213,14 +230,15 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Your privacy is important to us. We collect, use, and protect your personal 
-                information in accordance with our Privacy Policy, which is incorporated into 
-                these Terms by reference.
+                Your privacy is important to us. We collect, use, and protect
+                your personal information in accordance with our Privacy Policy,
+                which is incorporated into these Terms by reference.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                By using our services, you consent to the collection and use of your information 
-                as described in our Privacy Policy. We implement appropriate security measures 
-                to protect your personal data.
+                By using our services, you consent to the collection and use of
+                your information as described in our Privacy Policy. We
+                implement appropriate security measures to protect your personal
+                data.
               </p>
             </CardContent>
           </Card>
@@ -242,16 +260,20 @@ const TermsOfService = () => {
                 <li>Acts of terrorism or force majeure events</li>
               </ul>
               <p className="text-gray-700 leading-relaxed">
-                Our liability is limited to the amount of our service fees. We are not liable 
-                for any indirect, incidental, or consequential damages.
+                Our liability is limited to the amount of our service fees. We
+                are not liable for any indirect, incidental, or consequential
+                damages.
               </p>
-              
+
               <div className="mt-4 p-4 bg-blue-50 border border-blue-200 rounded-lg">
-                <p className="text-blue-800 font-semibold mb-2">Governing Law:</p>
+                <p className="text-blue-800 font-semibold mb-2">
+                  Governing Law:
+                </p>
                 <p className="text-blue-700 text-sm">
-                  These Terms of Service are governed by and construed in accordance with the 
-                  laws of the State of Georgia, United States. Any disputes shall be resolved 
-                  in the courts of Georgia.
+                  These Terms of Service are governed by and construed in
+                  accordance with the laws of the State of Georgia, United
+                  States. Any disputes shall be resolved in the courts of
+                  Georgia.
                 </p>
               </div>
             </CardContent>
@@ -264,14 +286,14 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Any disputes arising from these Terms or our services will be resolved through 
-                binding arbitration in accordance with the rules of the American Arbitration 
-                Association.
+                Any disputes arising from these Terms or our services will be
+                resolved through binding arbitration in accordance with the
+                rules of the American Arbitration Association.
               </p>
               <p className="text-gray-700 leading-relaxed">
-                You agree to waive any right to a jury trial or class action lawsuit. 
-                Arbitration will be conducted in New York, NY, and the laws of New York 
-                will govern these Terms.
+                You agree to waive any right to a jury trial or class action
+                lawsuit. Arbitration will be conducted in New York, NY, and the
+                laws of New York will govern these Terms.
               </p>
             </CardContent>
           </Card>
@@ -283,12 +305,27 @@ const TermsOfService = () => {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 leading-relaxed mb-4">
-                If you have any questions about these Terms of Service, please contact us:
+                If you have any questions about these Terms of Service, please
+                contact us:
               </p>
               <div className="space-y-2 text-gray-700">
-                <p><strong>Email:</strong> <a href="mailto:support@flydeskusa.com" className="text-blue-600 hover:underline">support@flydeskusa.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:18773325780">1877-332-5780</a></p>
-                                  <p><strong>Address:</strong> Fly Desk Usa Legal Department, 2484 Field Spring Dr, Lithonia, GA, 30058, USA</p>
+                <p>
+                  <strong>Email:</strong>{" "}
+                  <a
+                    href="mailto:support@flydeskusa.com"
+                    className="text-blue-600 hover:underline"
+                  >
+                    support@flydeskusa.com
+                  </a>
+                </p>
+                <p>
+                  <strong>Phone:</strong>{" "}
+                  <a href="tel:+18773325780">(877)-332-5780</a>
+                </p>
+                <p>
+                  <strong>Address:</strong> Fly Desk Usa Legal Department, 2484
+                  Field Spring Dr, Lithonia, GA, 30058, USA
+                </p>
               </div>
             </CardContent>
           </Card>
@@ -304,9 +341,11 @@ const TermsOfService = () => {
           </CardHeader>
           <CardContent>
             <p className="text-orange-800 leading-relaxed">
-              These Terms of Service constitute a legally binding agreement between you and Fly Desk Usa. 
-              By using our services, you acknowledge that you have read, understood, and agree to 
-              be bound by these terms. If you do not agree to these terms, please do not use our services.
+              These Terms of Service constitute a legally binding agreement
+              between you and Fly Desk Usa. By using our services, you
+              acknowledge that you have read, understood, and agree to be bound
+              by these terms. If you do not agree to these terms, please do not
+              use our services.
             </p>
           </CardContent>
         </Card>
@@ -317,4 +356,4 @@ const TermsOfService = () => {
   );
 };
 
-export default TermsOfService; 
+export default TermsOfService;

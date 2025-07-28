@@ -88,10 +88,10 @@ const Header = () => {
               className="hidden md:flex bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 border-blue-400/30 text-white font-semibold backdrop-blur-sm transition-all duration-500 hover:scale-110 hover:shadow-lg hover:shadow-blue-500/25 relative overflow-hidden group"
               asChild
             >
-              <a href="tel:18773325780" className="flex items-center">
+              <a href="tel:+18773325780" className="flex items-center">
                 <div className="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-700"></div>
                 <Phone className="w-4 h-4 mr-2 animate-pulse" />
-                <span className="relative z-10">1877-332-5780</span>
+                <span className="relative z-10">(877)-332-5780</span>
               </a>
             </Button>
             <Button
@@ -151,11 +151,11 @@ const Header = () => {
               {/* Mobile Call Button */}
               <div className="pt-4 border-t border-gray-200">
                 <a
-                  href="tel:18773325780"
+                  href="tel:+18773325780"
                   className="flex items-center justify-center gap-2 bg-gradient-to-r from-blue-500 to-purple-600 hover:from-blue-600 hover:to-purple-700 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 hover:scale-105"
                 >
                   <Phone className="w-4 h-4 animate-pulse" />
-                  1877-332-5780
+                  (877)-332-5780
                 </a>
               </div>
             </nav>
