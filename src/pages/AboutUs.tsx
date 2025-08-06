@@ -129,10 +129,12 @@ const AboutUs = () => {
             About Fly Desk Usa
           </h1>
           <p className="text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed">
-            We're more than just a flight booking platform. We're your trusted
-            travel partner, committed to making your journey seamless,
-            affordable, and unforgettable. With over 15 years of experience,
-            we've helped millions of travelers explore the world.
+            FlyDesk USA is a global flight support brand offering booking
+            assistance for both international and domestic routes. Our platform
+            is operated and managed by <strong>ZIMATIC SP Ltd</strong>, a
+            legally registered business entity based in Bulgaria (EU), which
+            owns and maintains the FlyDesk USA brand, website, and advertising
+            operations.
           </p>
         </div>
 

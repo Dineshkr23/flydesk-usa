@@ -46,6 +46,13 @@ const PrivacyPolicy = () => {
               update this policy from time to time, and we will notify you of
               any material changes.
             </p>
+
+            <p className="text-gray-700 leading-relaxed mt-4">
+              This website (flydeskusa.com) is operated by{" "}
+              <strong>ZIMATIC SP Ltd</strong>, the verified business entity
+              responsible for managing all operations under the FlyDesk USA
+              brand.
+            </p>
           </CardContent>
         </Card>
 

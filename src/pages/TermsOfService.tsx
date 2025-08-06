@@ -46,6 +46,13 @@ const TermsOfService = () => {
               travel service providers.
             </p>
 
+            <p className="text-gray-700 leading-relaxed mt-4">
+              This website (flydeskusa.com) is operated by{" "}
+              <strong>ZIMATIC SP Ltd</strong>, the verified business entity
+              responsible for managing all operations under the FlyDesk USA
+              brand.
+            </p>
+
             <div className="mt-4 p-4 bg-yellow-50 border border-yellow-200 rounded-lg">
               <p className="text-yellow-800 font-semibold mb-2">
                 Important Disclaimer:
